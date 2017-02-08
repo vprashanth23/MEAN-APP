@@ -1,0 +1,17 @@
+
+<div id="contact-list" class="container" >
+    <div class="jumbotron">
+        <h2 class="display-3 text-center">Contact Managment System</h2>
+        <p class="lead text-center">This is a simple contact system app</p>
+        <p class="lead text-center">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Add Contact</a>
+        </p>
+        <hr class="m-y-2">
+        <ul *ngIf="contacts">
+            <li *ngFor="let con of contacts" >
+              <contact-detail *ngIf="con" [contactDetail]="con" (onDelete)="$event"></contact-detail>
+            </li>
+        </ul>
+        <hr>
+    </div>
+</div>
